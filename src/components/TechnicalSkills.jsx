@@ -34,7 +34,7 @@ function TechnicalSkills() {
               <h3 className="text-lg font-semibold">Programming Languages</h3>
             </div>
             <SkillBar skill="Python" level={90} />
-            <SkillBar skill="Java" level={75} />
+            <SkillBar skill="Java" level={50} />
             <SkillBar skill="JavaScript" level={70} />
             <SkillBar skill="C Programming" level={80} />
           </div>
@@ -45,10 +45,10 @@ function TechnicalSkills() {
               <MdOutlineWeb className="text-[#00FFCA] text-2xl mr-2" />
               <h3 className="text-lg font-semibold">Web Development</h3>
             </div>
-            <SkillBar skill="React.js" level={80} />
+            <SkillBar skill="React.js" level={75} />
             <SkillBar skill="HTML/CSS" level={86} />
-            <SkillBar skill="Node.js" level={75} />
-            <SkillBar skill="Express.js" level={70} />
+            <SkillBar skill="Node.js" level={70} />
+            <SkillBar skill="Express.js" level={65} />
           </div>
 
           {/* Database & Tools */}
@@ -57,9 +57,9 @@ function TechnicalSkills() {
               <FaDatabase className="text-[#00FFCA] text-2xl mr-2" />
               <h3 className="text-lg font-semibold">Database & Tools</h3>
             </div>
-            <SkillBar skill="MongoDB" level={80} />
-            <SkillBar skill="MySQL" level={70} />
-            <SkillBar skill="Git/GitHub" level={75} />
+            <SkillBar skill="MongoDB" level={70} />
+            <SkillBar skill="MySQL" level={65} />
+            <SkillBar skill="Git/GitHub" level={70} />
           </div>
 
           {/* AI & Data Science */}
