@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,8 +8,27 @@ import ProfessionalExperience from './components/ProfessionalExperience';
 import Certifications from './components/Certifications';
 import TechnicalSkills from './components/TechnicalSkills';
 import Contact from './components/Contact';
+import LoadingScreen from './components/LoadingScreen'; // new component
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Wait until everything is loaded OR 3 seconds pass
+    const handleLoad = () => setLoading(false);
+    window.addEventListener('load', handleLoad);
+
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <div>
       <Navbar />
